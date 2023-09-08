@@ -16,7 +16,7 @@ A University of Guelph CIS*4010 Cloud Computing assignment.
 
 
 ## How to run shell
-1. Ensure that your AWS access key and secret key are in a file named `configuration.conf (set to [default]), and is contained within the same directory as the files mentioned in step 1
+1. Ensure that your AWS access key and secret key are in a file named `configuration.conf` (set to [default]), and is contained within the same directory as the files mentioned in step 1
 2. To run the program, type `<python3 main.py>`
 
 
