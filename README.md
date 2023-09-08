@@ -2,7 +2,7 @@
 
 
 ## Acknowledgements
-A University of Guelph CIS*4010 assignment
+A University of Guelph CIS*4010 Cloud Computing assignment.
 
 
 ## REGION
