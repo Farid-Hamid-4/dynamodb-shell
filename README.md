@@ -1,24 +1,21 @@
-# DynamoDB Shell
+# DynamoDB Command Line Tool
 
+A DynamoDB command line tool to sort csv data using pandas and boto3 to upload, update, and delete data from AWS DynamoDB tables.
 
 ## Acknowledgements
 A University of Guelph CIS*4010 Cloud Computing assignment.
 
-
 ## REGION
 `ca-central-1`
-
 
 ## IMPORTANT
 1. May require python3, my PC and Laptop uses python version 3.10.2
 2. The update_record module found in dynamodb.py is the add missing information module (4b), more on this below 
 3. Exiting the program will delete the tables for you if they still exist
 
-
 ## How to run shell
 1. Ensure that your AWS access key and secret key are in a file named `configuration.conf` (set to [default]), and is contained within the same directory as the files mentioned in step 1
 2. To run the program, type `<python3 main.py>`
-
 
 ## Normal behavior of shell
 1. When the program is intially run, you will be told to wait as it creates the 3 DynamoDB tables
@@ -28,7 +25,6 @@ A University of Guelph CIS*4010 Cloud Computing assignment.
    3. fhamid_country will `Country`, `Official Name`, `ISO3` and `ISO2` from `un_shortlist.csv`, `Captials` from `shortlist_captials.csv`, and `Languages` from `shortlist_languages.csv`
 3. It will then prompt the user with options to interact with the program (modules 3a,3b,3d-3g,4b)
 4. Upon exiting the program, it will delete the 3 tables from DynamoDB if they still exist
-
 
 ## Structure of Python Modules
    1. main.py - Creates tables, bulk loads data, allows user to manipulate the tables, and then upon exit will delete the tables (if they still exist).
@@ -60,7 +56,6 @@ A University of Guelph CIS*4010 Cloud Computing assignment.
    - For shortlist_languages.csv: *ISO3,Country,Languages*
    - For un_shortlist.csv: *ISO3,Country,Official Name,ISO2*
 
-
 ## How to use modules
 3a. **create_table** `Format: <table name>,<attribute name>`
 
@@ -85,14 +80,11 @@ Within the files themselves, if you'd like to leave a field blank, just use a co
 
 **create_reportB** `Format: <Year>` So just provide the year and it will generate a report for that year. It will save it in the pdf folder as year.pdf so you can delete all the files at once later.
 
-
 ## How to edit tables
 You can edit the tables through the interactive shell I've created using one of the menu options provided. Remember bulk load which is module 3c and add_record_row which is module 3d do the same thing so if you want to bulk load, just use 3d. 
 
-
 ## Limitations
 1. All values are uploaded as strings since floats can't be proccessed by DynamoDB, they are later type casted to floats and ints when needed
-
 
 ## Terminal Colors Legend:
 Blue - used to convey a message to the user, not meant to be interactive
